@@ -42,35 +42,29 @@ export default function Home() {
         <div className="text-sm font-semibold tracking-wide">Gaudí × Chocolate — Seasonal Small Batch</div>
       </header>
 
-     <main className="relative w-full h-screen">
+  <main className="relative w-full h-screen">
   {/* 背景画像 */}
   <img
     src="/images/barcelona-mosaic.png"
-    alt="Barcelona Mosaic"
+    alt="Gaudi Mosaic Background"
     className="absolute inset-0 w-full h-full object-cover z-0"
   />
 
-  {/* テキストコンテンツ */}
-  <div className="relative z-10 flex flex-col sm:flex-row justify-between items-center h-full px-8 py-16 text-white">
-    {/* 左側（Barcelona） */}
-    <div className="max-w-md bg-black bg-opacity-50 p-6 rounded-xl mb-8 sm:mb-0">
-      <h2 className="text-2xl font-bold mb-2">Barcelona：かたちを描く</h2>
-      <p>
-        バルセロナのデザインチームが、モザイクや鍛鉄を参照して型と配色を設計。
-        街の色とリズムを一粒の中に写し取ります。
-      </p>
-    </div>
+  {/* オーバーレイ */}
+  <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
 
-    {/* 右側（Belgium） */}
-    <div className="max-w-md bg-black bg-opacity-50 p-6 rounded-xl">
-      <h2 className="text-2xl font-bold mb-2">Belgium：口どけを仕立てる</h2>
-      <p>
-        ベルギーで修行した職人が配合とテンパリングを担当。
-        少量仕込みで冷却・熟成を行い、静かな余韻を目指しています。
-      </p>
-    </div>
+  {/* テキストコンテンツ */}
+  <div className="relative z-20 flex flex-col justify-center items-center h-full px-6 text-center text-white">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
+      バルセロナのデザインチーム × ベルギーのショコラティエ
+    </h1>
+    <p className="text-lg sm:text-xl md:text-2xl max-w-3xl drop-shadow-md">
+      伝統と美意識が出会って生まれた、新食感のチョコレート。<br />
+      モザイクのように鮮やかで、口どけは静かに。
+    </p>
   </div>
 </main>
+
 
 
       {/* 支払いブランド（Stripeに合わせた簡易バッジ） */}
