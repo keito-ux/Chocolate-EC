@@ -45,7 +45,7 @@ export default function Home() {
       {/* HERO（1=少年/Barcelona、2=モザイク/Belgiumの仕事） */}
       <main className="grid grid-cols-1 sm:grid-cols-2">
         <HeroPanel
-          src="/images/hero-boy.jpg"
+          src="/images/choco-gaudi-ceiling.jpg"
           title="Barcelona：かたちを描く"
           body="バルセロナのデザインチームが、モザイクや鍛鉄を参照して型と配色を設計。街の色とリズムを一粒の中に写し取ります。"
         />
