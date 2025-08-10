@@ -51,7 +51,7 @@ export default function Home() {
   />
 
   {/* オーバーレイ */}
-  <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
+  <div className="absolute inset-0 bg-black/40 z-10" />
 
   {/* テキストコンテンツ */}
   <div className="relative z-20 flex flex-col justify-center items-center h-full px-6 text-center text-white">
