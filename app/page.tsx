@@ -42,19 +42,36 @@ export default function Home() {
         <div className="text-sm font-semibold tracking-wide">Gaudí × Chocolate — Seasonal Small Batch</div>
       </header>
 
-      {/* HERO（1=少年/Barcelona、2=モザイク/Belgiumの仕事） */}
-      <main className="grid grid-cols-1 sm:grid-cols-2">
-        <HeroPanel
-          src="/images/choco-gaudi-ceiling.jpg"
-          title="Barcelona：かたちを描く"
-          body="バルセロナのデザインチームが、モザイクや鍛鉄を参照して型と配色を設計。街の色とリズムを一粒の中に写し取ります。"
-        />
-        <HeroPanel
-          src="/images/barcelona-mosaic.png"
-          title="Belgium：口どけを仕立てる"
-          body="ベルギーで修行した職人が配合とテンパリングを担当。少量仕込みで冷却・熟成を行い、静かな余韻を目指しています。"
-        />
-      </main>
+     <main className="relative w-full h-screen">
+  {/* 背景画像 */}
+  <img
+    src="/images/barcelona-mosaic.png"
+    alt="Barcelona Mosaic"
+    className="absolute inset-0 w-full h-full object-cover z-0"
+  />
+
+  {/* テキストコンテンツ */}
+  <div className="relative z-10 flex flex-col sm:flex-row justify-between items-center h-full px-8 py-16 text-white">
+    {/* 左側（Barcelona） */}
+    <div className="max-w-md bg-black bg-opacity-50 p-6 rounded-xl mb-8 sm:mb-0">
+      <h2 className="text-2xl font-bold mb-2">Barcelona：かたちを描く</h2>
+      <p>
+        バルセロナのデザインチームが、モザイクや鍛鉄を参照して型と配色を設計。
+        街の色とリズムを一粒の中に写し取ります。
+      </p>
+    </div>
+
+    {/* 右側（Belgium） */}
+    <div className="max-w-md bg-black bg-opacity-50 p-6 rounded-xl">
+      <h2 className="text-2xl font-bold mb-2">Belgium：口どけを仕立てる</h2>
+      <p>
+        ベルギーで修行した職人が配合とテンパリングを担当。
+        少量仕込みで冷却・熟成を行い、静かな余韻を目指しています。
+      </p>
+    </div>
+  </div>
+</main>
+
 
       {/* 支払いブランド（Stripeに合わせた簡易バッジ） */}
       <PayBrands />
